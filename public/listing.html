@@ -14,5 +14,5 @@
 
 <div class="pure-u-1" ng-repeat="result in results" ng-controller="ListCtrl">
     <h2>{{ result.title }}</h2>
-    <img src="{{ photographsByRel(result, 'gallery')[0] }}" alt="">
+    <img ng-src="{{ photographsByRel(result, 'gallery')[0] }}" alt="">
 </div>
