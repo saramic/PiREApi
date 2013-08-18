@@ -37,4 +37,13 @@ function ListCtrl($scope, $http) {
             return link[0]["uri"];
         });
     }
+
+    $scope.mainPhoto= function(result, rel) {
+        // TODO need modernizer to get around use of map
+        var link = result["main-photo"]["links"].filter(function(link){
+            return link["rel"] === rel;
+        });
+        // TODO still a little messy and no error checking
+        return link[0]["uri"];
+    }
 }

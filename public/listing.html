@@ -14,5 +14,47 @@
 
 <div class="pure-u-1" ng-repeat="result in results" ng-controller="ListCtrl">
     <h2>{{ result.title }}</h2>
-    <img ng-src="{{ photographsByRel(result, 'gallery')[0] }}" alt="">
+    <img ng-src="{{ mainPhoto(result, 'gallery') }}" alt="">
+    <dl>
+        <dt>Price</dt>
+        <dd>{{ result.price.display }}</dd>
+        <dt>Address (expand)</dt>
+        <dd>{{ result.address }}</dd>
+        <dt>New Listing</dt>
+        <dd>{{ result['new-listing'] }}</dd>
+        <dt>Photographs</dt>
+        <dd>{{ result['photographs'] }}</dd>
+        <dt>Title</dt>
+        <dd>{{ result['title'] }}</dd>
+        <dt>Content Type</dt>
+        <dd>{{ result['content-type'] }}</dd>
+        <dt>Listing Type</dt>
+        <dd>{{ result['listing-type'] }}</dd>
+        <dt>Land Size</dt>
+        <dd>{{ result['land-size'] }}</dd>
+        <dt>Product</dt>
+        <dd>{{ result.product }}</dd>
+        <dt>Links (expand)</dt>
+        <dd>{{ result.links }}</dd>
+        <dt>Features (expand)</dt>
+        <dd>{{ result.features }}</dd>
+        <dt>Channel</dt>
+        <dd>{{ result['channel'] }}</dd>
+        <dt>Property Type</dt>
+        <dd>{{ result['property-type'] }}</dd>
+        <dt>Agency (expand)</dt>
+        <dd>{{ result['agency'] }}</dd>
+        <dt>Modified Date</dt>
+        <dd>{{ result['modified-date'] }}</dd>
+        <dt>Description</dt>
+        <dd>{{ result['description'] }}</dd>
+        <dt>Listing ID</dt>
+        <dd>{{ result['listing-id'] }}</dd>
+        <dt>Main Photo</dt>
+        <dd>{{ mainPhoto(result, 'gallery') }}</dd>
+        <dt>caption</dt>
+        <dd>{{ result['main-photo']['caption'] }}</dd>
+        <dt>Status</dt>
+        <dd>{{ result.status }}</dd>
+    </dl>
 </div>
