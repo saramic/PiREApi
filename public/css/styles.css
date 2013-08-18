@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: whitesmoke;
+}
+
+.hide {
+  display: none;
+}
+
+.full-width {
+  width: 100%;
+  height: 5em;
+}

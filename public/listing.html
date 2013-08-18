@@ -1,0 +1,18 @@
+<div class="pure-u-1">
+    <form class="pure-form">
+        <fieldset>
+            <textarea class="full-width" name="search" ng-model="search"></textarea>
+            <button class="pure-button pure-button-primary" href="" ng-click="fetchSearch()">fetch</button>
+        </fieldset>
+    </form>
+    <ul>
+        <li ng-repeat="link in links">
+            <a href="#" ng-click="fetch(link.uri)">{{ link.rel }}</a>
+        </li>
+    </ul>
+</div>
+
+<div class="pure-u-1" ng-repeat="result in results" ng-controller="ListCtrl">
+    <h2>{{ result.title }}</h2>
+    <img src="{{ photographsByRel(result, 'gallery')[0] }}" alt="">
+</div>
