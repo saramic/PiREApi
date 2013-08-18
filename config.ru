@@ -36,7 +36,7 @@ map "/key.json" do
         'Content-Type'  => 'application/json',
         'Cache-Control' => 'public, max-age=300'
       },
-      "{\"reaApiKey\":\"#{ENV['REA_API_KEY']}\"}"
+      ["{\"reaApiKey\":\"#{ENV['REA_API_KEY']}\"}"]
     ]
   }
 end
